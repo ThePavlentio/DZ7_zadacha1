@@ -18,18 +18,15 @@ int function(std::string str, int forbidden_length)
 	}
 	else
 	{
-		int bad_length = length;
-
 		try
 		{
-			throw bad_length;
+			throw length;
 		}
 		catch (int length)
 		{
 			std::cout << "Вы ввели слово запретной длины! До свидания!" << std::endl;
 			return 0;
 		}
-
 	}
 
 	function(str, forbidden_length);
